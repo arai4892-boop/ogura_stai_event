@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ペヤング受取システム</title>
+
+<style>
+body{
+    font-family: sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:20px;
+}
+
+.card{
+    max-width:400px;
+    margin:50px auto;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.price{
+    font-size:48px;
+    font-weight:bold;
+    color:#333;
+    margin:20px 0;
+}
+
+button{
+    width:100%;
+    background:#00b900;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:18px;
+    font-size:24px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+#complete{
+    display:none;
+}
+
+.success{
+    font-size:60px;
+}
+
+.note{
+    color:#666;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card" id="payment">
+
+    <h1>🍜 ペヤング受取システム</h1>
+
+    <p>商品名</p>
+    <h2>ペヤング ソースやきそば</h2>
+
+    <div class="price">¥999,999</div>
+
+    <button onclick="pay()">
+        支払う
+    </button>
+
+</div>
+
+<div class="card" id="complete">
+
+    <div class="success">✅</div>
+
+    <h1>決済完了</h1>
+
+    <h2>ありがとうございました！</h2>
+
+    <p>
+    ペヤングは協賛品のため<br>
+    無料でお持ちいただけます！
+    </p>
+
+    <p class="note">
+    美味しい焼きそばを食べて頑張りましょう！！🍜
+    </p>
+
+</div>
+
+<audio id="pay">
+    <source src="paypay.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function pay(){
+
+    document.getElementById("pay").play();
+
+    setTimeout(function(){
+
+        document.getElementById("payment").style.display="none";
+        document.getElementById("complete").style.display="block";
+
+    },1000);
+
+}
+
+</script>
+
+</body>
+</html>
