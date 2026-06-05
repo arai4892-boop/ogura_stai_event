@@ -23,21 +23,23 @@ body{
     box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-.title{
-    font-size:26px;
-    font-weight:bold;
-    margin-bottom:10px;
+/* ★ご協賛品（強調） */
+.big-label{
+    font-size:28px;
+    font-weight:900;
+    margin-bottom:15px;
 }
 
-.sub{
+/* 通常ラベル */
+.label{
     color:#666;
-    margin:5px 0;
+    margin-top:10px;
 }
 
 .item{
     font-size:22px;
     font-weight:bold;
-    margin:15px 0;
+    margin:10px 0;
 }
 
 .price{
@@ -67,9 +69,9 @@ button:hover{
 
 <div class="card">
 
-    <div class="title">ORC PayPay</div>
+    <div class="big-label">ご協賛品</div>
 
-    <div class="sub">ご協賛品</div>
+    <div class="label">商品名</div>
 
     <div class="item">ペヤングソースやきそば</div>
 
@@ -86,13 +88,11 @@ button:hover{
 </audio>
 
 <script>
-
 function playSound(){
     const audio = document.getElementById("voice");
     audio.currentTime = 0;
     audio.play();
 }
-
 </script>
 
 </body>
